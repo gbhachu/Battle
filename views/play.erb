@@ -1,3 +1,12 @@
-<%= @player_1_name %> vs. <%= @player_2_name %>
+<div align = "center">
+<h1>Battle!</h1>
 
+<%= @player_1_name %> vs. <%= @player_2_name %>
+<br>
+<br>
 <%= @player_2_name %> hit points: 50
+
+
+</div>
+
+<button align = "left" type="button" onclick="alert('<%= @player_2_name %> Attacked!')">Attack</button>
