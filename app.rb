@@ -21,6 +21,13 @@ class Battle < Sinatra::Base
   erb (:play)
 end
 
+get '/attack' do
+#    "Hello World"
+ @player_1_name = $player_1_name.name
+ @player_2_name = $player_2_name.name
+  erb (:attack)
+end
+
 
 
 
