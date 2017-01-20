@@ -25,6 +25,9 @@ end
 get '/attack' do
   @game = $game
   @game.attacks(@game.opponent)
+  if @game.player_1.hp == 0 || @game.player_2.hp == 0
+    redirect to '/game_over'
+  end
   erb (:attack)
 
 end
@@ -32,6 +35,10 @@ end
 get '/switch' do
   $game.switch_turns
   redirect '/play'
+end
+
+get '/game_over' do
+  erb (:game_over)
 end
 
 
