@@ -24,7 +24,7 @@ end
 get '/attack' do
   @player_1 = $player_1_name
   @player_2 = $player_2_name
-  @player_1.attack(@player_2)
+  Game.new.attacks(@player_2)
   erb (:attack)
 end
 
