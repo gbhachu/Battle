@@ -24,9 +24,14 @@ end
 
 get '/attack' do
   @game = $game
-  @game.attacks(@game.player_2)
-  @game.switch_turns
+  @game.attacks(@game.opponent)
   erb (:attack)
+
+end
+
+get '/switch' do
+  $game.switch_turns
+  redirect '/play'
 end
 
 
